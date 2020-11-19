@@ -1,6 +1,7 @@
 # 05游戏集成sdk开发包
 
-## 导入方式
+## 在线导入方式
+### 导入方式
 将SDK存储库添加到您的构建文件中(项目根目录下build.gradle文件)
 allprojects {
     repositories {
@@ -8,10 +9,12 @@ allprojects {
         maven { url "https://raw.githubusercontent.com/05youxi/05sdk/main" }
     }
 }
-### 依赖方式
+在模块build.gradle文件加入dependencies
 dependencies {
     implementation '05you.lib:aar:1.0.1'
 }
+
+## 离线导入
 
 ## 混淆规则
 如项目中已开启混淆，则添加混淆规则
