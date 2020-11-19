@@ -242,11 +242,17 @@ mCenter.logout();
 
 ### 充值接口
 参数说明：
+
 Float money=0.01f;
+
 String productname=”商品名称”;
+
 String serverId =”服务器编号”;
+
 String charId = ”角色编号”;
+
 String cporderId = ”CP订单号”;
+
 String callbackInfo = ”扩展信息 当充值成功会回传给游戏服务器”;
 
 #### PayListener支付监听事件
@@ -280,21 +286,36 @@ mCenter.getSid();//sid(token)
 mCenter.getUid();//用户uid
 ```
 ### 提交用户角色信息
+
 参数说明：
+
 String serverId=”服务器ID”;
+
 String serverName=”服务器名”;
+
 String roleId=”角色ID”;
+
 String roleName=”角色名”;
+
 String roleLevel=”角色等级”;
+
 String roleCTime=”角色创建时间 时间戳”;
+
 String power=”战斗力”; 
+
 String sign=”签名”; 
 
 sign签名规则:
+
 sign=MD5(power=**&roleid=**&rolelevel=**&rolename=**&serverid=**+loginkey)
+
 注意：
+
 ① 签名中的loginkey (即登录KEY) 由我方提供，为SDK参数之一;
+
 ② 若不存在某项参数，请务必传空字符，不可不传，且请勿随便传值. 
+
+
 ```
 // 当角色信息变动的时候调用这个接口（例如角色创建、升级等情况）
 mCenter.submitRoleInfo(String serverId, String serverName,
