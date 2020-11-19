@@ -318,8 +318,7 @@ sign=MD5(power=**&roleid=**&rolelevel=**&rolename=**&serverid=**+loginkey)
 
 ```
 // 当角色信息变动的时候调用这个接口（例如角色创建、升级等情况）
-mCenter.submitRoleInfo(String serverId, String serverName,
-tring roleId, String roleName, String roleLevel, 			String roleCTime,String power,String sign);
+mCenter.submitRoleInfo(String serverId, String serverName,String roleId, String roleName, String roleLevel,String roleCTime,String power,String sign);
 ```
 ### 退出游戏
 ```
