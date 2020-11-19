@@ -145,8 +145,7 @@ public void onCreate() {
     super.onCreate();
     SDKUtils.init(this);
 }
-
-
+```
 ## sdk使用
 
 ### 在使用sdk的地方获取sdk实例
@@ -154,6 +153,7 @@ public void onCreate() {
 mCenter = GMcenter.getInstance(Context context);
 mCenter.onCreate(Activity activity);
 ```
+
 ### 登录、登出、关闭登录窗口、SDK初始化 事件监听
 ```
 Center.setLoginListener(LoginListener loginListener);
@@ -188,9 +188,6 @@ mCenter.setLoginListener(new LoginListener() {
     }
 });
 
-```
-
-```
 mCenter.setInitListener(new InitListener() {
 
     @Override
@@ -210,8 +207,10 @@ mCenter.setInitListener(new InitListener() {
         ToastUtil.showShortToast(MainActivity.this, errMsg);
     }
 });
+```
 
 // 游戏退出监听方法(当调用exitDialog()方法，必须设置此监听)
+```
 mCenter.setExitGameListener(new ExitGameListener() {
     @Override
     public void onSuccess() {
