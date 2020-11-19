@@ -17,6 +17,9 @@ dependencies {
 ## 离线导入
 下载线上项目05you/lib/aar/版本号/aar-版本号.arr的文件，导入项目lib目录
 
+eclipse参考一下链接
+https://www.cnblogs.com/shortboy/p/4424944.html
+
 ## 混淆规则
 如项目中已开启混淆，则添加混淆规则
 -keep class com.bun.miitmdid.core.** {*;}
