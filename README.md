@@ -2,24 +2,36 @@
 
 ## as在线导入方式
 ### 导入方式
+
 将SDK存储库添加到您的构建文件中(项目根目录下build.gradle文件)
+```
 allprojects {
     repositories {
         ...
         maven { url "https://raw.githubusercontent.com/05youxi/05sdk/main" }
     }
 }
+```
+
 在模块build.gradle文件加入dependencies
+```
 dependencies {
+    ...
     implementation '05you.lib:aar:1.0.1'
 }
+```
 
 ## as离线导入
+
 下载线上项目05you/lib/aar/版本号/aar-版本号.arr的文件，导入项目lib目录
 在模块build.gradle文件加入dependencies
+
+```
 dependencies {
     implementation fileTree(includes: ['*.jar','*.aar'], dir: 'libs')
+    ...
 }
+```
 
 ## eclipse导入参考以下链接
 https://www.cnblogs.com/shortboy/p/4424944.html
@@ -133,7 +145,7 @@ public void onCreate() {
     super.onCreate();
     SDKUtils.init(this);
 }
-```
+
 
 ## sdk使用
 
