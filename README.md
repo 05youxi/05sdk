@@ -52,6 +52,16 @@ https://www.cnblogs.com/shortboy/p/4424944.html
 https://www.cnblogs.com/fb-boy/p/4301461.html
 
 https://www.cnblogs.com/tangshengwei/p/6341462.html
+
+仓库地址
+
+```
+google()
+maven{url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+jcenter()
+maven { url "https://jitpack.io" }
+```
+
 ```
 maven第三方插件的pom文件仓库配置
 <?xml version="1.0" encoding="UTF-8"?>
