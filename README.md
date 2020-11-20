@@ -41,9 +41,13 @@ dependencies {
 ```
 
 ## eclipse导入参考以下链接
+1.sdk资源导入
+
 https://www.cnblogs.com/shortboy/p/4424944.html
 
-maven在线导入
+2.第三方库资源导入
+
+配置maven
 https://www.cnblogs.com/fb-boy/p/4301461.html
 ```
 maven第三方插件的pom文件仓库配置
