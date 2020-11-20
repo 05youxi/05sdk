@@ -48,7 +48,10 @@ https://www.cnblogs.com/shortboy/p/4424944.html
 2.第三方库资源导入
 
 配置maven
+
 https://www.cnblogs.com/fb-boy/p/4301461.html
+
+https://www.cnblogs.com/tangshengwei/p/6341462.html
 ```
 maven第三方插件的pom文件仓库配置
 <?xml version="1.0" encoding="UTF-8"?>
