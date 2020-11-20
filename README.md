@@ -46,7 +46,7 @@ https://www.cnblogs.com/shortboy/p/4424944.html
 maven在线导入
 https://www.cnblogs.com/fb-boy/p/4301461.html
 ```
-maven的pom文件仓库配置
+maven第三方插件的pom文件仓库配置
 <?xml version="1.0" encoding="UTF-8"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
