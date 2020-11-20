@@ -17,24 +17,175 @@ allprojects {
 ```
 dependencies {
     ...
-    implementation '05you.lib:aar:1.0.1'
+    implementation '05you.lib:05sdk:6.0.11'
 }
 ```
 
 ## as离线导入
-
-下载线上项目05you/lib/aar/版本号/aar-版本号.arr的文件，导入项目lib目录
+1.将项目仓库下载到本地
+2.将SDK存储库添加到您的构建文件中(项目根目录下build.gradle文件)
+```
+allprojects {
+    repositories {
+        ...
+        maven { url "file://D://project/05sdk/05sdk/aar" }//指定本地仓库地址
+    }
+}
+```
 在模块build.gradle文件加入dependencies
-
 ```
 dependencies {
-    implementation fileTree(includes: ['*.jar','*.aar'], dir: 'libs')
+       implementation '05you.lib:05sdk:6.0.11'
     ...
 }
 ```
 
 ## eclipse导入参考以下链接
 https://www.cnblogs.com/shortboy/p/4424944.html
+
+maven在线导入
+https://www.cnblogs.com/fb-boy/p/4301461.html
+```
+maven的pom文件仓库配置
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>05you.lib</groupId>
+  <artifactId>05sdk</artifactId>
+  <version>6.0.11</version>
+  <packaging>aar</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations</artifactId>
+      <version>15.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp</artifactId>
+      <version>4.9.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.swiperefreshlayout</groupId>
+      <artifactId>swiperefreshlayout</artifactId>
+      <version>1.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.appcompat</groupId>
+      <artifactId>appcompat</artifactId>
+      <version>1.2.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.hyphenate</groupId>
+      <artifactId>hyphenate-sdk-lite</artifactId>
+      <version>3.6.8</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.bumptech.glide</groupId>
+      <artifactId>glide</artifactId>
+      <version>4.9.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.trello.rxlifecycle2</groupId>
+      <artifactId>rxlifecycle</artifactId>
+      <version>2.2.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.trello.rxlifecycle2</groupId>
+      <artifactId>rxlifecycle-components</artifactId>
+      <version>2.2.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.retrofit2</groupId>
+      <artifactId>converter-gson</artifactId>
+      <version>2.3.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.retrofit2</groupId>
+      <artifactId>adapter-rxjava2</artifactId>
+      <version>2.3.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>logging-interceptor</artifactId>
+      <version>3.9.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.reactivex.rxjava2</groupId>
+      <artifactId>rxjava</artifactId>
+      <version>2.1.6</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.reactivex.rxjava2</groupId>
+      <artifactId>rxandroid</artifactId>
+      <version>2.0.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.CymChad</groupId>
+      <artifactId>BaseRecyclerViewAdapterHelper</artifactId>
+      <version>2.9.50</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.razerdp</groupId>
+      <artifactId>BasePopup</artifactId>
+      <version>2.1.9</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.cardview</groupId>
+      <artifactId>cardview</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.recyclerview</groupId>
+      <artifactId>recyclerview</artifactId>
+      <version>1.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.ogaclejapan.smarttablayout</groupId>
+      <artifactId>library</artifactId>
+      <version>2.0.0</version>
+      <type>aar</type>
+      <scope>compile</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>jp.wasabeef</groupId>
+      <artifactId>glide-transformations</artifactId>
+      <version>4.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.multidex</groupId>
+      <artifactId>multidex</artifactId>
+      <version>2.0.1</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
+```
 
 ## 混淆规则
 如项目中已开启混淆，则添加混淆规则
