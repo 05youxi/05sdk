@@ -56,9 +56,7 @@ https://www.cnblogs.com/tangshengwei/p/6341462.html
 仓库地址
 
 ```
-google()
 maven{url 'http://maven.aliyun.com/nexus/content/groups/public/'}
-jcenter()
 maven { url "https://jitpack.io" }
 ```
 
