@@ -225,6 +225,8 @@ maven第三方插件的pom文件仓库配置
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS" />
     <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="com.lwwl.app.youxi05.permissions.TokenReceiver"/>
+    
     <application
         android:allowBackup="true"
         andoird:name="自定义application"
